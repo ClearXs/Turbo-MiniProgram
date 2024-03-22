@@ -3,21 +3,26 @@
 module.exports = {
   presets: [
     [
-      'taro',
+      "taro",
       {
-        framework: 'react',
-        ts: true
+        framework: "react",
+        ts: true,
       },
     ],
   ],
   plugins: [
     [
-      'import',
+      "import",
       {
-        libraryName: 'taro-hooks',
-        camel2DashComponentName: false
+        libraryName: "taro-hooks",
+        camel2DashComponentName: false,
       },
-      'taro-hooks',
-    ]
+      "taro-hooks",
+      {
+        libraryName: "react-vant",
+        libraryDirectory: "es",
+        style: false,
+      },
+    ],
   ],
 };
