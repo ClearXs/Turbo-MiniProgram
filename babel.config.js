@@ -1,28 +1,12 @@
 // babel-preset-taro 更多选项和默认值：
-// https://github.com/NervJS/taro/blob/next/packages/babel-preset-taro/README.md
+// https://docs.taro.zone/docs/next/babel-config
 module.exports = {
   presets: [
-    [
-      "taro",
-      {
-        framework: "react",
-        ts: true,
-      },
-    ],
-  ],
-  plugins: [
-    [
-      "import",
-      {
-        libraryName: "taro-hooks",
-        camel2DashComponentName: false,
-      },
-      "taro-hooks",
-      {
-        libraryName: "react-vant",
-        libraryDirectory: "es",
-        style: false,
-      },
-    ],
-  ],
-};
+    ['taro', {
+      framework: 'react',
+      ts: true,
+      compiler: 'vite',
+      useBuiltIns: process.env.TARO_ENV === 'h5' ? 'usage' : false
+    }]
+  ]
+}

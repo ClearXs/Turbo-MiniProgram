@@ -1,8 +1,7 @@
-module.exports = {
-  env: {
-    NODE_ENV: '"development"',
-  },
-  defineConstants: {},
+import type { UserConfigExport } from "@tarojs/cli"
+
+export default {
+  
   mini: {},
-  h5: {},
-};
+  h5: {}
+} satisfies UserConfigExport<'vite'>
